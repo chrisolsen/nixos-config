@@ -51,13 +51,14 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  # services.displayManager.sddm.enable = true;
+  # services.desktopManager.plasma6.enable = true;  
 
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
     variant = "";
+    options = "caps:ctrl_modifier";
   };
 
   # Enable CUPS to print documents.
@@ -79,6 +80,8 @@
     #media-session.enable = true;
   };
 
+  services.gnome.gnome-keyring.enable = true;
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -88,13 +91,19 @@
     description = "Chris";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      kdePackages.kate
     #  thunderbird
     ];
   };
 
   # Install firefox.
   programs.firefox.enable = true;
+
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;  
+  };
+
+  programs.waybar.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -106,11 +115,15 @@
   environment.systemPackages = with pkgs; [
     helix 
     git
- #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+
+    grim
+    # slurp
+    wl-clipboard
+    mako
   ];
 
-  environment.variables.EDITOR = "helix";
+  environment.variables.EDITOR = "hx";
 
   hardware.bluetooth.enable = true;
 
