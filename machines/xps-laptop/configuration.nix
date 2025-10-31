@@ -90,9 +90,6 @@
     isNormalUser = true;
     description = "Chris";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
   };
 
   # Install firefox.
@@ -116,11 +113,14 @@
     helix 
     git
     wget
+  ];
 
-    grim
-    # slurp
-    wl-clipboard
-    mako
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+    nerd-fonts.droid-sans-mono   
+    source-code-pro
+    font-awesome
+    roboto-mono
   ];
 
   environment.variables.EDITOR = "hx";

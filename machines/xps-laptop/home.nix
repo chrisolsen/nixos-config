@@ -3,7 +3,7 @@
 {
   home.username = "chris";
   home.homeDirectory = "/home/chris";
-
+ 
   home.packages = with pkgs; [
     fastfetch  # successor of neofetch
     lf  # terminal file manager
@@ -11,22 +11,41 @@
     # media
     mpv
 
+    slurp
+    grim
+    wl-clipboard
+    mako
+    fd
+    marksman
+    rofi-wayland
+    swaybg
+    syncthing
+    chezmoi
+
     # archives
     zip
     xz
     unzip
     p7zip
 
+    # dev
+    tmux
+    lazygit
+    hyprpicker
+
     # utils
     ripgrep # recursively searches directories for a regex pattern
     jq # A lightweight and flexible command-line JSON processor
     eza # A modern replacement for ‘ls’
     fzf # A command-line fuzzy finder
-
-    # misc
     file
     which
     tree
+    btop  # replacement of htop/nmon
+    iotop # io monitoring
+    iftop # network monitoring
+    lsof # list open files
+    killall
 
     # nix related
     #
@@ -37,12 +56,8 @@
     # productivity
     glow # markdown previewer in terminal
 
-    btop  # replacement of htop/nmon
-    iotop # io monitoring
-    iftop # network monitoring
-
-    # system call monitoring
-    lsof # list open files
+    # wireless
+    impala
   ];
 
   programs.git = {
