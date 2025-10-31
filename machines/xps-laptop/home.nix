@@ -11,16 +11,15 @@
     # media
     mpv
 
-    slurp
-    grim
+    slurp  # screen grabs
     wl-clipboard
     mako
     fd
-    marksman
-    rofi-wayland
-    swaybg
-    syncthing
-    chezmoi
+    marksman # markdown lsp
+    rofi-wayland # quick app access
+    swaybg  # background
+    syncthing  # sync files with other machines
+    chezmoi # config manager
 
     # archives
     zip
@@ -31,7 +30,7 @@
     # dev
     tmux
     lazygit
-    hyprpicker
+    hyprpicker  # color picker
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
@@ -45,7 +44,6 @@
     iotop # io monitoring
     iftop # network monitoring
     lsof # list open files
-    killall
 
     # nix related
     #
