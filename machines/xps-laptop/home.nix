@@ -13,8 +13,8 @@
 
     slurp  # screen grabs
     wl-clipboard
-    mako
-    fd
+    mako  # wayland notification daemon
+    fd # find
     marksman # markdown lsp
     rofi-wayland # quick app access
     swaybg  # background

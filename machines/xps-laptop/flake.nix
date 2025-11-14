@@ -11,7 +11,6 @@
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
-    # Please replace my-nixos with your hostname
     nixosConfigurations.xps = nixpkgs.lib.nixosSystem {
       modules = [
         # Import the previous configuration.nix we used,
