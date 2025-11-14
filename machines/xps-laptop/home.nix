@@ -6,7 +6,7 @@
  
   home.packages = with pkgs; [
     fastfetch  # successor of neofetch
-    lf  # terminal file manager
+    yazi  # terminal file manager
 
     # media
     mpv
