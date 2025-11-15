@@ -89,7 +89,6 @@
 
   programs.bash = {
     enable = true;
-    enableCompletion = true;
     bashrcExtra = ''
       export PATH="$PATH:$HOME/.local/bin:$HOME/.local/scripts"
       eval "$(zoxide init bash)"
