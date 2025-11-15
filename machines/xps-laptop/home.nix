@@ -70,6 +70,8 @@
       font-size = 12;
       font-family = "JetBrainsMono Nerd Font";
       unfocused-split-opacity = 0.96;
+      background-opacity = 0.95;
+      background-blur = true;
     };
 
     # keybindings = {
