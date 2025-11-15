@@ -89,11 +89,17 @@
     enableCompletion = true;
     bashrcExtra = ''
       export PATH="$PATH:$HOME/.local/bin:$HOME/.local/scripts"
+      eval "$(zoxide init bash)"
     '';
 
     shellAliases = {
       neofetch = "fastfetch";
     };
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;  
   };
 
   home.stateVersion = "25.05";
