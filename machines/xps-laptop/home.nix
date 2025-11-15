@@ -5,21 +5,21 @@
   home.homeDirectory = "/home/chris";
  
   home.packages = with pkgs; [
+
+    # apps
+    qutebrowser
+    chezmoi # config manager
+    syncthing  # sync files with other machines
     fastfetch  # successor of neofetch
     yazi  # terminal file manager
+    slurp  # screen grabs
+    glow # markdown previewer in terminal
+    fuzzel
+    rofi-wayland
 
     # media
     mpv
-
-    slurp  # screen grabs
-    wl-clipboard
-    mako  # wayland notification daemon
-    fd # find
-    marksman # markdown lsp
-    rofi-wayland # quick app access
-    swaybg  # background
-    syncthing  # sync files with other machines
-    chezmoi # config manager
+    mpd
 
     # archives
     zip
@@ -33,26 +33,29 @@
     hyprpicker  # color picker
 
     # utils
-    ripgrep # recursively searches directories for a regex pattern
-    jq # A lightweight and flexible command-line JSON processor
-    eza # A modern replacement for ‘ls’
-    fzf # A command-line fuzzy finder
+    fd            # find
+    wl-clipboard  # clipboard selector
+    mako          # wayland notification daemon
+    marksman      # markdown lsp
+    libnotify     # notify-send
+    swaybg        # background image
+    ripgrep       # recursively searches directories for a regex pattern
+    jq            # lightweight and flexible command-line JSON processor
+    eza           # modern replacement for ‘ls’
+    fzf           # command-line fuzzy finder
     file
     which
     tree
-    btop  # replacement of htop/nmon
-    iotop # io monitoring
-    iftop # network monitoring
-    lsof # list open files
+    btop          # replacement of htop/nmon
+    iotop         # io monitoring
+    iftop         # network monitoring
+    lsof          # list open files
 
     # nix related
     #
     # it provides the command `nom` works just like `nix`
     # with more details log output
     nix-output-monitor
-
-    # productivity
-    glow # markdown previewer in terminal
 
     # wireless
     impala
